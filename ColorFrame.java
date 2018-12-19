@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 
 public class ColorFrame extends JFrame
@@ -13,7 +15,9 @@ public class ColorFrame extends JFrame
 	public ColorFrame()
 	{
 		
-		
+		colorPanel.setSize(PANEL_WIDTH, PANEL_WIDTH);
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
 		
 	}
 	
@@ -32,7 +36,7 @@ public class ColorFrame extends JFrame
 	public JButton makeButton(final String aString)
 	{
 		
-		JButton button = new JButton("aString");
+		JButton button = new JButton(aString);
 		
 		class ButtonListener implements ActionListener
 		{
@@ -64,6 +68,33 @@ public class ColorFrame extends JFrame
 		return button;
 		
 	}
+	
+	
+	public JMenu createMenus(final String aString)
+	{
+		
+		JMenu menu = new JMenu(aString);
+		return menu;
+		
+	}
+	
+	public void makeColorAction()
+	{
+		
+		
+		
+	}
+	
+	public void makeCustomAction()
+	{
+		
+		
+		
+	}
+	
+	
+	private static final int PANEL_WIDTH = 300;
+	private static final int PANEL_HEIGHT = 200;
 	
 	private CustomFrame custom;
 	private JPanel colorPanel;
